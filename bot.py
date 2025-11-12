@@ -197,7 +197,12 @@ def main():
 
 if __name__ == "__main__":
     print("🚀 Flask + Telegram Bot ishga tushmoqda...")
-    start_bot()
-    # Render porti
+
+    import os
     port = int(os.environ.get("PORT", 10000))
-    app.run(host='0.0.0.0', port=port, debug=False)
+
+    # ❌ Bu qatorni O‘CHIRING:
+    # start_bot()
+
+    # ✅ Flask ilovani ishga tushiring:
+    app.run(host='0.0.0.0', port=port)
