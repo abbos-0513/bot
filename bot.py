@@ -195,14 +195,19 @@ def main():
             print(f"Xatolik: {e}")
             time.sleep(5)
 
+from flask import Flask
+import os
+
+# Flask ilovasi yaratiladi
+app = Flask(__name__)
+
+# Asosiy sahifa
+@app.route('/')
+def home():
+    return "🚀 Flask + Telegram Bot ishga tushdi!"
+
+# Asosiy ishga tushirish qismi
 if __name__ == "__main__":
     print("🚀 Flask + Telegram Bot ishga tushmoqda...")
-
-    import os
     port = int(os.environ.get("PORT", 10000))
-
-    # ❌ Bu qatorni O‘CHIRING:
-    # start_bot()
-
-    # ✅ Flask ilovani ishga tushiring:
     app.run(host='0.0.0.0', port=port)
