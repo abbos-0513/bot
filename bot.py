@@ -196,4 +196,8 @@ def main():
             time.sleep(5)
 
 if __name__ == "__main__":
-    main()
+    print("🚀 Flask + Telegram Bot ishga tushmoqda...")
+    start_bot()
+    # Render porti
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host='0.0.0.0', port=port, debug=False)
